@@ -1,46 +1,38 @@
-### **DamageStyleHUD - Track Your Total Damage in Real-Time**
+### **DamageStyleHUD**
 
-**DamageStyleHUD** is a mod for ULTRAKILL that enhances the StyleHUD by adding a real-time damage counter. Keep track of your total damage directly on the style bar, making it easier than ever to measure your performance during intense combat.
+**DamageStyleHUD** enhances ULTRAKILL by adding a dynamic damage counter to the StyleHUD, showing the cumulative damage dealt at the top of the style text. The counter updates in real-time as you hit enemies, with vibrant color transitions that reflect your performance and emphasize high-impact moments.
 
 ---
 
 ## 🌟 Features
 
-- **Real-Time Damage Counter**:
-  - Displays the total damage dealt in real-time on the first line of the StyleHUD.
-  - Updates dynamically as you deal damage to enemies.
+- **Real-Time Damage Tracking**:
+  - Displays total damage dealt recently at the top of the StyleHUD.
+  - Updates dynamically with each hit, resetting after a **10-second window** of no further damage.
 
-- **Clear and Permanent Formatting**:
-  - The damage text is prominently formatted in orange and displayed consistently above existing style metrics.
+- **Vibrant Color Transitions**:
+  - Damage text transitions smoothly through a rainbow of colors using an HSV color system:
+    - Starts at **blue** for lower damage.
+    - Progresses through **green**, **yellow**, and **orange**.
+    - Reaches **red** for high damage totals.
+  - Damage exceeding **1000** is always displayed in **solid red**, highlighting significant impacts.
 
 ---
 
 ## 🎮 Why Use This Mod?
 
-- **Measure Efficiency**:
-  - Easily gauge the effectiveness of different weapons and strategies.
+- **Clear Feedback**:
+  - Instantly see how much damage you’ve dealt recently with cumulative totals displayed prominently.
 
-- **Improve Gameplay**:
-  - Fine-tune your combat techniques by monitoring damage output.
+- **Engaging Visuals**:
+  - Dynamic color transitions make tracking damage more satisfying and performance-focused.
 
-- **Track Performance**:
-  - Satisfyingly watch your damage numbers climb during intense battles.
-
----
-
-## 🚀 How It Works
-
-- **Harmony Integration**:
-  - The mod patches key methods in the StyleHUD class:
-    - **AddPoints**: Captures the style points (equivalent to damage) and adds them to a running total.
-    - **UpdateItems**: Ensures the damage counter always appears as the first line on the StyleHUD.
-
-- **Dynamic Updates**:
-  - The damage counter updates seamlessly alongside existing style metrics for a fluid and immersive experience.
+- **Rewarding High Damage**:
+  - The special red indicator for damage exceeding **1000** highlights major impacts and critical combos.
 
 ---
 
-## 📥 Installation
+## 🚀 Installation
 
 ### Requirements
 - **BepInEx**: Ensure BepInEx is installed in your ULTRAKILL directory.
@@ -49,17 +41,14 @@
 1. Download the latest release of **DamageStyleHUD** from the [Releases](https://github.com/MrRaposinha/DamageStyleHUD/releases) page.
 2. Place the `DamageStyleHUD.dll` file in your `BepInEx/plugins` folder.
    - If the `plugins` folder doesn’t exist, create it manually.
-3. Launch ULTRAKILL and enjoy tracking your damage in real-time!
+3. Launch ULTRAKILL and enjoy enhanced damage tracking!
 
 ---
 
-## 🔧 Technical Details
+## ⚠️ Notes
 
-- **Text Format**:
-  - The damage counter appears as `+ <color=orange>DAMAGE: [value]</color>`, where `[value]` is the total damage dealt.
-
-- **Lightweight Design**:
-  - Optimized for minimal performance impact, ensuring smooth gameplay.
+- The damage counter resets after 10 seconds of inactivity, encouraging consistent hits to maintain high totals.
+- Damage exceeding **1000** receives special visual emphasis, helping you recognize significant combos or attacks.
 
 ---
 
@@ -69,4 +58,4 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 
 ---
 
-Thank you for trying **DamageStyleHUD**! Take control of your combat stats and make every hit count. 🎮🔥
+**DamageStyleHUD** brings clarity and excitement to your damage tracking in ULTRAKILL. Watch your numbers rise and your colors shift as you deliver devastating combos. Happy slaying! 🎮🔥
